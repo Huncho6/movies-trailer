@@ -1,0 +1,72 @@
+export const fastAndFuriousMovies = [
+    {
+      title: "The Fast and the Furious",
+      posterURL: "https://www.tallengestore.com/cdn/shop/products/Fast_Furious_1_-_Paul_Walker_-_Vin_Diesel_-_Tallenge_Hollywood_Action_Movie_Poster_f1bf2dd5-d86c-4a3f-b363-f4e8815adc37_large.jpg?v=1582542985",
+      description: "An undercover cop infiltrates a street racing gang.",
+      rating: "7.0",
+      trailer: "",
+    },
+    {
+      title: "2 Fast 2 Furious",
+      posterURL: "https://c8.alamy.com/comp/2JH12WX/walkergibsonmendesbridgesposter-2-fast-2-furious-2003-2JH12WX.jpg",
+      description: "A former cop teams up with a childhood friend.",
+      rating: "5.9",
+      trailer: "",
+    },
+    {
+      title: "The Fast and the Furious: Tokyo Drift",
+      posterURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl-HkcnuMXpWy9T6-t93aNYNTZqIijjxEIfQ&s",
+      description: "A high school student is sent to live with his father in Tokyo.",
+      rating: "6.0",
+      trailer: "https://www.youtube.com/watch?v=uSDNZeRX_1Y&pp=ygUOZmFzdCA1IHRyYWlsZXI%3D",
+    },
+    {
+      title: "Fast & Furious 4",
+      posterURL: "https://www.tallengestore.com/cdn/shop/products/Fast_Furious_4_-_Paul_Walker_-_Vin_Diesel_-_Tallenge_Hollywood_Action_Movie_Poster_9c5e692d-8c8f-45f8-8072-fa3aba4d5115.jpg?v=1582543059",
+      description: "Brian O'Conner and Dom Toretto reteam to bring down a heroin importer.",
+      rating: "6.6",
+      trailer: "",
+    },
+    {
+      title: "Fast Five",
+      posterURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST8mN9tsm40yw7vnuH6KDg5Bj3VvrWssOflQ&s",
+      description: "Dom and Brian plan a $100 million heist in Rio de Janeiro.",
+      rating: "7.3",
+      trailer: "https://www.youtube.com/watch?v=vcn2GOuZCKI",
+    },
+    {
+      title: "Fast & Furious 6",
+      posterURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKmD7-Kw_Ee9rqn-JvxC2vKhVIcWkNM5jbskkG7brGWiJlklL9unroM4wG9t8tTtS5qRc&usqp=CAU",
+      description: "Dom and the team help a DSS agent bring down a skilled mercenary.",
+      rating: "7.0",
+      trailer: "",
+    },
+    {
+      title: "Furious 7",
+      posterURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL_Et9dzOcCZiTvMv8VIqT5PGbnfdisHdLTc6E4pSbn5Du4ZAZTeMarAR1_SWGSULqYqc&usqp=CAU",
+      description: "Dom and the team face off against a vengeful brother.",
+      rating: "7.2",
+      trailer: "",
+    },
+    {
+      title: "The Fate of the Furious",
+      posterURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1vp70GOiOnFhsiuHKx-mbqbF61GzcM-GrQA&s",
+      description: "Dom is coerced into betraying his team.",
+      rating: "6.6",
+      trailer: "",
+    },
+    {
+      title: "Fast & Furious 9",
+      posterURL: "https://musicart.xboxlive.com/7/68c35100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
+      description: "Dom's younger brother Jakob seeks revenge.",
+      rating: "5.2",
+      trailer: "",
+    },
+    {
+      title: "Fast X",
+      posterURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfTvZY7GJw7sf9Z0l211S2rixUFzdBLA4dCQ&s",
+      description: "The latest installment of the Fast saga.",
+      rating: "6.0",
+      trailer: "",
+    }
+  ];

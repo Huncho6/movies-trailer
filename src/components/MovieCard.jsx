@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
 const CardContainer = styled.div`
   display: flex;
@@ -10,7 +12,7 @@ const CardContainer = styled.div`
   border-radius: 5px;
 `;
 
-const PostalUrl = styled.img`
+const Poster = styled.img`
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -21,11 +23,13 @@ const Title = styled.h3`
   margin-bottom: 10px;
 `;
 
-const Description = styled.p`
-  margin-bottom: 10px;
-`;
-
 const MovieCard = ({ movie }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(`/movie/${movie._id}`); // Use '/movie/' instead of '/MovieDetail/'
+  };
+  
 
   if (!movie) {
     return <div>Movie not found</div>; // Error handling for when movie is not defined
@@ -33,10 +37,10 @@ const MovieCard = ({ movie }) => {
 
   return (
     <CardContainer>
-      <PostalUrl src={movie.posterURL} alt={movie.title} />
+      <Poster src={movie.posterURL} alt={movie.title} />
       <Title>{movie.title}</Title>
-      <Description>{movie.description}</Description>
-      <div>{movie.rating}</div>
+      <div>Rating:{movie.rating}</div>
+      <button onClick={handleNavigate}>Check It Out</button>
     </CardContainer>
   );
 };

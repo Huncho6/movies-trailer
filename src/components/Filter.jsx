@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const FilterWrapper = styled.div`
@@ -6,14 +6,20 @@ const FilterWrapper = styled.div`
 `;
 
 const Button = styled.button`
-height: 35px;
-background-color: green;
-`
+  height: 35px;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  border-radius: 5px;
+`;
 
 const Input = styled.input`
   margin-right: 10px;
   padding: 5px;
   border-radius: 8px;
+  border: 1px solid #ccc;
 `;
 
 const Filter = ({ onFilter }) => {

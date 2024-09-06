@@ -4,7 +4,6 @@ export const MovieContext = createContext();
 
 const MovieContextProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
-
   const [filter, setFilter] = useState({ title: "", rating: "" });
 
   const filteredMovies = movies.filter(movie => {
@@ -14,16 +13,16 @@ const MovieContextProvider = ({ children }) => {
     );
   });
 
-  const addMovie = (newMovie) => {
-    setMovies((prevMovies) => [...prevMovies, newMovie]);
+  const updateFilter = (newFilter) => {
+    setFilter(prevFilter => ({ ...prevFilter, ...newFilter }));
   };
 
-  const updateFilter = (newFilter) => {
-    setFilter(newFilter);
+  const addMovie = (newMovie) => {
+    setMovies(prevMovies => [...prevMovies, newMovie]);
   };
 
   return (
-    <MovieContext.Provider value={{ movies: filteredMovies, addMovie, updateFilter }}>
+    <MovieContext.Provider value={{ movies: filteredMovies, updateFilter, addMovie }}>
       {children}
     </MovieContext.Provider>
   );
