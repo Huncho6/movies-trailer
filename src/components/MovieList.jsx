@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 import axiosInstance from "../utils/axiosInstance";
 import MovieCard from "./MovieCard";
 import Filter from "./Filter"; // Import Filter component
+import styled from "styled-components";
+
+// Grid container for the MovieCard components
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // Two columns
+  gap: 20px; // Space between the cards
+  padding: 20px;
+  margin-left: 30px;
+`;
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -12,7 +22,7 @@ const MovieList = () => {
       try {
         const response = await axiosInstance.get("/movies");
         if (response.status === 200) {
-          const fetchedMovies = response.data|| [];
+          const fetchedMovies = response.data || [];
           setMovies(fetchedMovies);
           setFilteredMovies(fetchedMovies); // Initialize filtered movies
         }
@@ -39,7 +49,7 @@ const MovieList = () => {
   return (
     <div>
       <Filter onFilter={handleFilter} />
-      <div>
+      <GridContainer>
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie) => (
             <MovieCard key={movie._id} movie={movie} />
@@ -47,7 +57,7 @@ const MovieList = () => {
         ) : (
           <p>No movies available</p>
         )}
-      </div>
+      </GridContainer>
     </div>
   );
 };

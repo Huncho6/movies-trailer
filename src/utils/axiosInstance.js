@@ -1,11 +1,11 @@
 // src/axiosInstance.js
-import axios from 'axios';
+import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:45/api', // Replace with your API base URL
+  baseURL: "https://movies-server-hxc0.onrender.com/api", 
   timeout: 100000,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 

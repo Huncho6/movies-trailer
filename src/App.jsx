@@ -10,12 +10,12 @@ function App() {
   
   return (
     <MovieContextProvider>
-      {/* Conditionally render AddMovie based on the current route */}
-      {pathname === '/' && <AddMovie />}
       <Routes>
         <Route path="/" element={<MovieList />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
       </Routes>
+       {/* Conditionally render AddMovie based on the current route */}
+       {pathname === '/' && <AddMovie />}
     </MovieContextProvider>
   );
 }

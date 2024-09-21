@@ -4,32 +4,42 @@ import styled from 'styled-components';
 import axiosInstance from '../utils/axiosInstance';
 
 const DetailContainer = styled.div`
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
 `;
 
 const Poster = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 480px;
   object-fit: cover;
+  border-radius: 10px;
   margin-bottom: 20px;
 `;
 
 const Title = styled.h2`
+  font-size: 24px;
   margin-bottom: 20px;
+  color: #333;
 `;
 
 const Description = styled.p`
-  margin-bottom: 20px;
+  font-size: 16px;
   text-align: center;
+  color: #666;
+  margin-bottom: 20px;
 `;
 
 const Trailer = styled.iframe`
-  width: 560px;
-  height: 315px;
+  width: 100%;
+  height: 360px;
+  max-width: 640px;
   margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
 `;
 
 const embedUrl = (url) => {
@@ -69,8 +79,6 @@ const MovieDetail = () => {
       <Poster src={movie.posterURL} alt={movie.title} />
       <Title>{movie.title}</Title>
       <Description>{movie.description}</Description>
-
-      {/* Embed trailer if available */}
       {movie.trailerURL ? (
         <Trailer
           src={embedUrl(movie.trailerURL)}
@@ -81,7 +89,6 @@ const MovieDetail = () => {
       ) : (
         <p>No trailer available</p>
       )}
-      
       <Link to="/">Back to Home</Link>
     </DetailContainer>
   );
