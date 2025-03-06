@@ -11,6 +11,11 @@ const GridContainer = styled.div`
   gap: 20px; // Space between the cards
   padding: 20px;
   margin-left: 30px;
+
+    @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Single column for small screens
+    margin-left: 0; // Remove left margin on small screens
+  }
 `;
 
 const MovieList = () => {
